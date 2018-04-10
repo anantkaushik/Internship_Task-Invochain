@@ -1,0 +1,11 @@
+*,body,h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+}
+body{
+	  background: #2575fc;
+  background: -webkit-linear-gradient(left, #6a11cb, #2575fc);
+  background: -o-linear-gradient(left, #6a11cb, #2575fc);
+  background: -moz-linear-gradient(left, #6a11cb, #2575fc);
+  background: linear-gradient(left, #6a11cb, #2575fc);
+}

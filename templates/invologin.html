@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/login.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+</head>
+<body>
+	
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form"  action = "{{ url_for('invosearch') }}" method = "POST">
+				<span class="login100-form-title">
+					Account Login
+				</span>
+				<span class="login100-form-title">
+					{{error}}
+				</span>
+				<div class="wrap-input100 rs1 validate-input" data-validate = "Username is required">
+					<input class="input100" type="text" name="email">
+					<span class="label-input100">E-mail</span>
+				</div>
+				
+				<div class="wrap-input100 rs2 validate-input" data-validate="Password is required">
+					<input class="input100" type="password" name="password">
+					<span class="label-input100">Password</span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button type="submit" class="login100-form-btn">
+						Sign in
+					</button>
+				</div>
+				<div>
+					<a href="/invoregistration" class="txt1">
+						New User? Sign Up
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

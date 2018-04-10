@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/index.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+		<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/register.css')}}">
+
+			<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+</head>
+<body>
+	<div class="container-login100" style="background-image: url('../static/images/bg-01.jpg');background-image: url('{{url_for('.static', filename='images/bg-01.jpg')}}');">
+		<div class="wrap-login100">
+			<span class="login1">
+					Welcome {{name}}<div class="container-login100-form-btn" >
+					<div class="wrap-login100-form-btn" style="width: 30%; height: 45px;">
+						<div class="login100-form-bgbtn" ></div>
+						<a href="/logout"><button type="submit" class="login100-form-btn">
+							Log Out
+						</button></a>
+					</div>
+				</div>
+				</span>
+				<div class="sign-center ">
+					<span>Balance = {{balance}}</span>
+				</div>
+				<div class="sign-center ">
+					<span >{{error}}</span>
+				</div><hr hidden=""><br><hr>
+				<form class="login1-w" action = "{{ url_for('addmoney') }}" method = "POST">
+				<div class="wrap-input100  m1">
+					<label><span class="label-input100">Add Money</span>
+					<input class="input100" type="number" name="addmoney" placeholder="Amount" required="">
+					<span class="focus-input100" data-symbol="&#xf300;"></span>
+				</label>
+				</div></form>
+				<div class="container-login100-form-btn">
+					<div class="wrap-login100-form-btn" style="width: 30%; height: 45px;">
+						<div class="login100-form-bgbtn"></div>
+						<button type="submit" class="login100-form-btn">
+							Add
+						</button>
+					</div>
+				</div><hr hidden=""><br><hr>
+				<form class="login1-w" action = "{{ url_for('paymoney') }}" method = "POST">
+					<div class="wrap-input100  m1">
+					<label><span class="label-input100">Pay Money</span>
+					<input class="input100" type="number" name="paymoney" placeholder="Amount" required="">
+					<span class="focus-input100" data-symbol="&#xf301;"></span></label>
+
+				</div></form>
+								<div class="container-login100-form-btn" >
+					<div class="wrap-login100-form-btn" style="width: 30%; height: 45px;">
+						<div class="login100-form-bgbtn" ></div>
+						<button type="submit" class="login100-form-btn">
+							Pay
+						</button>
+					</div>
+				</div>
+	</div>
+</body>
+</html>
