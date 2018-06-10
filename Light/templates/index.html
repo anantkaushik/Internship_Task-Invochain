@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Internship Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/index.css')}}">
+</head>
+<body>
+	<div class="container">
+		<h1>LIGHT IS {{flag1}}</h1>
+		<a href="/setflag"><button class="button" id="sb">{{flag2}}</button></a>
+	</div>
+	<script type="text/javascript">
+		x = document.getElementById('sb').innerText;
+		if(x=="OFF"){
+			document.body.style.background = "linear-gradient(to bottom, #1fa2ff, #12d8fa, #a6ffcb)";
+		}
+		else{
+			document.body.style.background = "linear-gradient(to bottom, black, white)";
+		}
+	</script>
+</body>
+</html>
